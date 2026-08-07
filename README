@@ -1,0 +1,213 @@
+# Meal Mastery
+
+**A meal-planning and pantry-management Android application built with React Native, Expo, and TypeScript.**
+
+Meal Mastery was created to make weekly meal planning easier by bringing meal generation, pantry awareness, recipes, shopping lists, and cooking guidance into one application.
+
+Rather than treating meal planning as a simple list of recipes, Meal Mastery considers user preferences and available ingredients to help turn the question **“What should I make this week?”** into an actionable plan.
+
+## Features
+
+### 7-Day Meal Planning
+
+Meal Mastery provides a complete weekly planning workflow, allowing users to generate and organize meals across seven days.
+
+### Preference-Based Meal Generation
+
+Users can configure meal preferences that influence the meals selected by the generator, making generated plans more relevant than purely random recipe selection.
+
+### Pantry Management
+
+The pantry system allows users to track ingredients they already have available.
+
+Meal Mastery can use pantry information when evaluating meals, helping users make better use of ingredients they already own.
+
+### Expiry Awareness
+
+Pantry items can be considered based on expiry, allowing the application to prioritize ingredients that should be used sooner.
+
+This adds another dimension to meal recommendations beyond simple ingredient matching.
+
+### Ingredient-Aware Recipe Scoring
+
+Recipes can be evaluated against pantry contents to determine how well they match ingredients already available to the user.
+
+This helps reduce unnecessary purchases and makes generated meal plans more practical.
+
+### Automated Shopping Lists
+
+Once meals are planned, Meal Mastery helps translate the plan into an actionable shopping list.
+
+This connects planning and execution rather than requiring users to manually review every recipe and reconstruct the ingredients they need.
+
+### 168 Built-In Recipes
+
+Meal Mastery includes a library of 168 recipes spanning a variety of meals and cooking styles.
+
+### Cook Mode
+
+Cook Mode provides a focused interface for following a recipe while preparing it, reducing the need to navigate through the rest of the application while cooking.
+
+## Technology Stack
+
+* **React Native** — cross-platform application framework
+* **Expo** — development and Android application tooling
+* **TypeScript** — application development and type safety
+* **AsyncStorage** — persistent local application data
+* **React Navigation** — application navigation and screen management
+* **Android** — initial production platform
+
+## Application Architecture
+
+Meal Mastery is organized around several connected areas of application state:
+
+```text
+User Preferences
+       │
+       ▼
+Meal Generator ◄──── Recipe Library
+       │
+       │
+       ├──────────────► 7-Day Meal Plan
+       │                       │
+       │                       ▼
+       │                 Shopping List
+       │
+       ▼
+Pantry Inventory
+       │
+       ├── Ingredient Availability
+       └── Expiry Awareness
+```
+
+The goal is to connect information that is often managed separately.
+
+A recipe is not useful simply because it exists in a database. It becomes more useful when the application understands what the user wants to eat, what ingredients are already available, what should be used soon, and what still needs to be purchased.
+
+## Designing the Meal Generator
+
+One of the more interesting parts of Meal Mastery was designing meal generation as more than random recipe selection.
+
+The generator has to balance several pieces of information:
+
+* user preferences
+* recipe availability
+* pantry contents
+* ingredient matching
+* ingredient expiry
+* variety across the generated plan
+
+This meant treating meal selection as a scoring and filtering problem rather than simply choosing an item from an array.
+
+That distinction became increasingly important as the recipe library grew.
+
+## Local-First Data
+
+Meal Mastery uses local persistent storage for application information such as preferences, pantry state, meal plans, and shopping-list data.
+
+For this type of application, a local-first approach provides several benefits:
+
+* fast access to frequently used data
+* continued functionality without constant network access
+* reduced infrastructure requirements
+* simpler handling of personal pantry and planning information
+
+AsyncStorage provides persistence between application sessions while keeping the architecture appropriate for the project's scope.
+
+## Connecting Pantry Data to Recommendations
+
+The pantry became one of the most useful parts of the application because it could influence other features instead of existing as an isolated inventory list.
+
+Pantry information can contribute to recipe selection by identifying meals that already match ingredients the user owns.
+
+Expiry awareness adds another signal.
+
+If multiple meals are otherwise suitable, using an ingredient approaching its expiry can make one recipe more useful than another.
+
+This creates a simple principle behind the recommendation system:
+
+**The best meal isn't necessarily the highest-rated recipe. It's the meal that best fits the user's current situation.**
+
+## From Meal Plan to Shopping List
+
+Generating meals solves only part of the planning problem.
+
+The next question is:
+
+**What do I need to buy?**
+
+Meal Mastery connects the generated plan with shopping-list functionality so users can move from choosing meals to preparing for the week without rebuilding the plan manually.
+
+This was an important product-design lesson: useful software often comes from connecting adjacent steps in a workflow rather than optimizing one feature in isolation.
+
+## Building Cook Mode
+
+Cooking presents a different user experience from planning.
+
+When someone is actively preparing food, they don't need the same information density or navigation options they need while organizing the week.
+
+Cook Mode was designed around that context, providing a more focused way to use recipe information during preparation.
+
+It reinforced an important lesson from building the application:
+
+**The same user can have very different interface requirements depending on what they are trying to accomplish at that moment.**
+
+## Shipping the Application
+
+Meal Mastery progressed beyond a development prototype and was released as an Android application.
+
+Moving from development to release introduced a different set of considerations from simply implementing features.
+
+The application needed to behave consistently across sessions, preserve user data, provide understandable navigation, and function as a complete product rather than a collection of individual screens.
+
+Shipping the application also changed how I approached development.
+
+Once software reaches actual users, reliability, usability, upgrade behavior, and seemingly small interface decisions become much more important.
+
+## What I Learned
+
+### Build workflows, not isolated features
+
+The strongest parts of Meal Mastery emerged when individual features began working together.
+
+Pantry tracking became more valuable when it influenced meal generation. Meal generation became more valuable when it created a weekly plan. The weekly plan became more useful when it connected to shopping and cooking.
+
+### Data structure affects product capability
+
+How recipes, ingredients, preferences, and pantry items are represented directly determines what the application can reason about later.
+
+Features such as ingredient matching and expiry-aware recommendations depend heavily on consistent underlying data.
+
+### Simple automation can provide meaningful value
+
+A recommendation system does not need to be unnecessarily complicated to be useful.
+
+Combining several understandable signals can produce results that feel substantially smarter than random selection.
+
+### Shipping teaches different lessons than prototyping
+
+Building a feature until it works locally is only one part of software development.
+
+Turning those features into something another person can install and use creates a much higher standard for consistency and completeness.
+
+### Product decisions are engineering decisions
+
+Choices about navigation, persistence, data models, and feature interaction affect both the user experience and the technical architecture.
+
+Building Meal Mastery gave me practical experience making those tradeoffs rather than treating application development as a collection of independent coding tasks.
+
+## Project Status
+
+Meal Mastery is a functional Android application and an ongoing personal software-development project.
+
+Future areas of exploration include expanding the recipe library, improving recommendation logic, refining pantry intelligence, and continuing to improve the planning and cooking experience.
+
+## About the Project
+
+Meal Mastery began as an idea for making an everyday problem easier through software.
+
+Building it gave me the opportunity to work across the complete application lifecycle: defining the problem, designing features, structuring data, implementing the application in TypeScript and React Native, testing workflows, iterating on the user experience, and ultimately shipping a usable Android application.
+
+For me, that end-to-end process is the most valuable part of the project.
+
+**The goal wasn't simply to build an app. It was to build something people could actually use.**
