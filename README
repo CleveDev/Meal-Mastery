@@ -48,6 +48,40 @@ Meal Mastery includes a library of 168 recipes spanning a variety of meals and c
 
 Cook Mode provides a focused interface for following a recipe while preparing it, reducing the need to navigate through the rest of the application while cooking.
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/weekly-planner.png" width="30%" alt="Meal Mastery weekly meal planner">
+  &nbsp;&nbsp;
+  <img src="assets/meal-generator.png" width="30%" alt="Meal Mastery meal generator">
+  &nbsp;&nbsp;
+  <img src="assets/pantry.png" width="30%" alt="Meal Mastery pantry management">
+</p>
+
+<p align="center">
+  <strong>Weekly Planner</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Meal Generator</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Smart Pantry</strong>
+</p>
+
+<p align="center">
+  <img src="assets/shopping-list.png" width="30%" alt="Meal Mastery shopping list">
+  &nbsp;&nbsp;
+  <img src="assets/recipe.png" width="30%" alt="Meal Mastery recipe view">
+  &nbsp;&nbsp;
+  <img src="assets/cook-mode.png" width="30%" alt="Meal Mastery Cook Mode">
+</p>
+
+<p align="center">
+  <strong>Shopping List</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Recipe View</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Cook Mode</strong>
+</p>
+
 ## Technology Stack
 
 * **React Native** — cross-platform application framework
