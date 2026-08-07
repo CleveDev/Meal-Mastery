@@ -51,35 +51,31 @@ Cook Mode provides a focused interface for following a recipe while preparing it
 ## Screenshots
 
 <p align="center">
-  <img src="assets/weekly-planner.png" width="30%" alt="Meal Mastery weekly meal planner">
+  <img src="assets/HomeScreen.png" width="30%" alt="Meal Mastery home screen">
   &nbsp;&nbsp;
-  <img src="assets/meal-generator.png" width="30%" alt="Meal Mastery meal generator">
+  <img src="assets/PlanScreen.png" width="30%" alt="Meal Mastery meal planning screen">
   &nbsp;&nbsp;
-  <img src="assets/pantry.png" width="30%" alt="Meal Mastery pantry management">
+  <img src="assets/RecipeScreen.png" width="30%" alt="Meal Mastery recipe screen">
 </p>
 
 <p align="center">
-  <strong>Weekly Planner</strong>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <strong>Meal Generator</strong>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <strong>Smart Pantry</strong>
+  <strong>Home</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Meal Planning</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Recipes</strong>
 </p>
 
 <p align="center">
-  <img src="assets/shopping-list.png" width="30%" alt="Meal Mastery shopping list">
+  <img src="assets/ShoppingListScreen.png" width="30%" alt="Meal Mastery shopping list">
   &nbsp;&nbsp;
-  <img src="assets/recipe.png" width="30%" alt="Meal Mastery recipe view">
-  &nbsp;&nbsp;
-  <img src="assets/cook-mode.png" width="30%" alt="Meal Mastery Cook Mode">
+  <img src="assets/Weekly%20Tracker.png" width="30%" alt="Meal Mastery weekly tracker">
 </p>
 
 <p align="center">
   <strong>Shopping List</strong>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <strong>Recipe View</strong>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <strong>Cook Mode</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Weekly Tracker</strong>
 </p>
 
 ## Technology Stack
